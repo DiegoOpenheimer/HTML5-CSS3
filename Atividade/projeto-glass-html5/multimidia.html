@@ -3,52 +3,73 @@
 <html lang="pt-br">
 
 <head>
-	<meta charset="UTF-8"/>
-	<title>TUDO SOBRE GOOGLE GLASS</title>
-	<link rel = "stylesheet" href = "_css/estilo.css"/>;
-	<script language="javascript" src="_javascript/funcoes.js"></script>
+    <meta charset="UTF-8"/>
+    <title>TUDO SOBRE GOOGLE GLASS</title>
+    <link rel="stylesheet" href="_css/estilo.css"/>
+    <link rel="stylesheet" href="_css/media.css"/>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
 </head>
 
 <body>
 
 <div id="interface">
 
-<header id="cabecalho">	
-	<hgroup>
-	<h1>Google Glass</h1>
-	<h2>A revolução do Google está chegando</h2>
-	</hgroup>
+    <header id="cabecalho">
+        <hgroup>
+            <h1>Google Glass</h1>
+            <h2>A revolução do Google está chegando</h2>
+        </hgroup>
 
 
-	<img id="icone" src="_imagens/multimidia.png">
-<nav id="menu">	
-<h1>Menu Principal</h1>
-<ul type="disc">
-<li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
-<li onmousemove="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href = "specs.html">Especificações</a></li>
-<li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
-<li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="multimidia.html">Multimídia</a></li>
-<li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
-</ul>
-</nav>
-</header>
+        <img id="icone" src="_imagens/multimidia.png">
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+            <ul type="disc">
+                <li onmousemove="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+                        href="index.html">Home</a></li>
+                <li onmousemove="mudaFoto('_imagens/especificacoes.png')"
+                    onmouseout="mudaFoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+                <li onmousemove="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+                        href="fotos.html">Fotos</a></li>
+                <li onmousemove="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')">
+                    <a href="multimidia.html">Multimídia</a></li>
+                <li onmousemove="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+                        href="fale-conosco.html">Fale conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="corpo-full">
+
+        <article id="noticia-principal">
+            <header id="cabecalho-artigo">
+                <hgroup>
+                    <h3>Glass > Multimidia</h3>
+                    <h1>Sons e Vídeo</h1>
+                    <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                </hgroup>
+            </header>
+        <div id="tv-radio">
+            <audio id="musica" controls="controls">
+                <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mp3"/>
+                Desculpe, mas não foi possível carrega o áudio
+            </audio>
+            <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+                <source src="_media/getting-started.mp4" type="video/mp4"/>
+                Desculpe, mas não foi possível carrega o vídeo
+            </video>
+
+        </div>
 
 
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+      </article>
+    </section>
 
-
-Áudio e Vídeo
-
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
-
-<footer id="rodape">
-<p style = "text-align: center";>Copyright &copy: 2017 - by Diego Alves Openheimer</p>
-<p style = "text-align: center";><a href="https://www.facebook.com/diego.openheimer.9" target = "_bank";>Facebook</a></p>
-</footer>
+    <footer id="rodape">
+        <p style="text-align: center" ;>Copyright &copy: 2017 - by Diego Alves Openheimer</p>
+        <p style="text-align: center" ;><a href="https://www.facebook.com/diego.openheimer.9" target="_bank"
+                                           ;>Facebook</a></p>
+    </footer>
 </div>
 </body>
 </html>
