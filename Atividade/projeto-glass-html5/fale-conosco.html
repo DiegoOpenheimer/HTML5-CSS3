@@ -6,9 +6,19 @@
     <meta charset="UTF-8"/>
     <title>TUDO SOBRE GOOGLE GLASS</title>
     <link rel="stylesheet" href="_css/estilo.css"/>
-    ;
     <link rel="stylesheet" href="_css/form.css"/>
     <script language="javascript" src="_javascript/funcoes.js"></script>
+    <script>
+        function calc_total() {
+            var calc = parseInt(document.getElementById('cQuantidade').value);
+            calc *= 2000;
+            document.getElementById('cPreco').value = calc;
+        }
+
+
+    </script>
+
+
 </head>
 
 <body>
@@ -50,7 +60,7 @@
                 </hgroup>
             </header>
 
-            <form>
+            <form name="formulario" method="post" action="dados.php" oninput="calc_total();">
 
                 <fieldset id="usuario">
                     <legend> Identificação do Usuário</legend>
@@ -67,9 +77,9 @@
                     </fieldset>
                     <p>Data de Nascimento:<input type="date" name="tData" id="cData"/></p>
                 </fieldset>
-                <fieldset>
+                <fieldset id="contato">
                     <legend>Endereço do Usuário</legend>
-                    <label for="eNome"><p>Logradouro:</label><input type="text" name="enNome" id="eNome" size="30"
+                    <label for="eNome"><p>Logradouro:</label><input type="text" name="enNome" id="eNome" size="20"
                                                                     maxlength="80" placeholder="Rua, Av, etc.."/></p>
                     <label for="eNum"><p>Número:</label><input type="number" name="enNum" id="eNum" min="0"
                                                                max="999999"/></p>
@@ -128,18 +138,25 @@
                     </datalist>
                 </fieldset>
                 <fieldset id="Fusuario" name="fUsuario">Mensagem do Usuário
-                    <p><label for="gUrg">Grau de Urgência:<input type="range" min="0" max="10" id="gUrg" name="Gurg"/></label></p>
-                    <p><label for="textArea">Mensagem:</label></p><textarea  cols="45" rows="5" id="textArea" name="text_area" placeholder="Deixe sua mensagem aqui"></textarea>
+                    <p><label for="gUrg">Grau de Urgência:<input type="range" min="0" max="10" id="gUrg"
+                                                                 name="Gurg"/></label></p>
+                    <p><label for="textArea">Mensagem:</label></p><textarea cols="45" rows="5" id="textArea"
+                                                                            name="text_area"
+                                                                            placeholder="Deixe sua mensagem aqui"></textarea>
 
                 </fieldset>
-                Quero um Google Glass
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
+                <fieldset id="compra">
+                    <legend>Quero um Google Glass</legend>
+                    <input type="checkbox" name="cCheck" id="ccCheck" checked/><label for="ccCheck">Gostaria de adquirir
+                    um Google Glass quando disponível</label>
+                    </br><label for="cColor">Cor:</label> <input type="color" name="cor" id="cColor" value="blue"/>
+                    </br><label for="cQuantidade">Quantidade:<input name="quantidade" id="cQuantidade" type="number"
+                                                                    min="0" max="999"/></label>
+                    </br><label for="cPreco">Preço Total: R$ <input type="text" id="cPreco" name="preco" size="10"
+                                                                    placeholder=" Valor" readonly/></label>
+                </fieldset>
 
-
-                [BOTÃO ENVIAR]
+                <input  id="enviar" type="submit" value="Enviar"/>
 
             </form>
         </article>
