@@ -67,16 +67,71 @@
                     </fieldset>
                     <p>Data de Nascimento:<input type="date" name="tData" id="cData"/></p>
                 </fieldset>
-                <fieldset><legend>Endereço do Usuário</legend>
-                    <label for="eNome"><p>Logradouro:</label><input type="text" name="enNome" id="eNome" size="30" maxlength="80" placeholder="Rua, Av, etc.."/></p>
-                    <label for="eNum"><p>Número:</label><input type="number" name="enNum" id="eNum" min="0" max="999999"/></p>
-                    <label for="eEstado"><p>Estado:</label><input type="text" name="enEstado" id="eEstado" size="20" maxlength="20"/></p>
-                    <label for="eCity"><p>Cidade:</label><input type="text" name="enCity" id="eCity" size="20" maxlength="20"/></p>
-                </fieldset>
-                Mensagem do Usuário
-                Grau de Urgência:
-                Mensagem:
+                <fieldset>
+                    <legend>Endereço do Usuário</legend>
+                    <label for="eNome"><p>Logradouro:</label><input type="text" name="enNome" id="eNome" size="30"
+                                                                    maxlength="80" placeholder="Rua, Av, etc.."/></p>
+                    <label for="eNum"><p>Número:</label><input type="number" name="enNum" id="eNum" min="0"
+                                                               max="999999"/></p>
+                    <label for="eEstado"><p>Estado:</label>
+                    <select id="eEstado" name="sEstado">
+                        <optgroup label="Sul" id="grupo" name="cGrupo">
+                            <option>Párana</option>
+                            <option>Rio Grande do Sul</option>
+                            <option>Espírito Santo</option>
+                        </optgroup>
+                        <optgroup label="Sudeste" id="grupo1" name="c1Grupo">
+                            <option selected>São Paulo</option>
+                            <option>Rio de Janeiro</option>
+                            <option>Minas Gerais</option>
+                        </optgroup>
 
+
+                    </select>
+
+                    </p>
+                    <label for="eCity"><p>Cidade:</label><input type="text" name="enCity" id="eCity" size="20"
+                                                                maxlength="20" list="cidades"/></p>
+                    <datalist id="cidades">
+                        <option value="Pouso Alegre"></option>
+                        <option> Campinas</option>
+                        <option> Poços de Caldas</option>
+                        <option> Capital</option>
+                        <option> Rio Branco</option>
+                        <option> Maceió</option>
+                        <option> Macapá</option>
+                        <option> Manaus</option>
+                        <option> Salvador</option>
+                        <option> Fortaleza</option>
+                        <option> Brasília</option>
+                        <option> Vitória</option>
+                        <option> Goiânia</option>
+                        <option> São Luiz</option>
+                        <option> Cuiabá</option>
+                        <option> Campo Grande</option>
+                        <option> Belo Horizonte</option>
+                        <option> Belém</option>
+                        <option> João Pessoa</option>
+                        <option> Curitiba</option>
+                        <option> Recife</option>
+                        <option> Terezina</option>
+                        <option> Rio de Janeiro</option>
+                        <option> Natal</option>
+                        <option> Porto Alegre</option>
+                        <option> Porto Velho</option>
+                        <option> Boa Vista</option>
+                        <option> Florianópolis</option>
+                        <option> São Paulo</option>
+                        <option> Aracajú</option>
+                        <option> Palmas</option>
+
+                    </datalist>
+                </fieldset>
+                <fieldset id="Fusuario" name="fUsuario">Mensagem do Usuário
+                    <p><label for="gUrg">Grau de Urgência:<input type="range" min="0" max="10" id="gUrg" name="Gurg"/></label></p>
+                    <p><label for="textArea">Mensagem:</label></p><textarea  cols="45" rows="5" id="textArea" name="text_area" placeholder="Deixe sua mensagem aqui"></textarea>
+
+                </fieldset>
                 Quero um Google Glass
                 Gostaria de adquirir um Google Glass quando disponível
                 Cor:
