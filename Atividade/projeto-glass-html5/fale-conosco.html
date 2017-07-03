@@ -60,7 +60,7 @@
                 </hgroup>
             </header>
 
-            <form name="formulario" method="post" action="dados.php" oninput="calc_total();">
+            <form name="formulario" method="post" action="dados.php" >
 
                 <fieldset id="usuario">
                     <legend> Identificação do Usuário</legend>
@@ -151,7 +151,7 @@
                     um Google Glass quando disponível</label>
                     </br><label for="cColor">Cor:</label> <input type="color" name="cor" id="cColor" value="blue"/>
                     </br><label for="cQuantidade">Quantidade:<input name="quantidade" id="cQuantidade" type="number"
-                                                                    min="0" max="999"/></label>
+                                                                    min="0" max="999" oninput="calc_total();"/></label>
                     </br><label for="cPreco">Preço Total: R$ <input type="text" id="cPreco" name="preco" size="10"
                                                                     placeholder=" Valor" readonly/></label>
                 </fieldset>
