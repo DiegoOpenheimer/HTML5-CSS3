@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lemonada');
+
+
+.conteudo {
+	width: 700px;
+	margin: 55px auto 10px auto;
+	padding: 5px;
+	background: #fff;
+}
+.conteudo h2{
+	color: #b9c941;
+	font-family: sans-serif;
+}
+
+.data-postagem {
+	display: block;
+	padding-bottom: 5px;
+	border-bottom: 2px solid rgba(86,82,82,0.1);
+}
+
+.imagem {
+	margin: 8px 10px 10px 2px;
+	float: left;
+}
+
+.texto {
+	text-align: justify;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+
+.donoPublicacao{
+	display: block;
+	border-left: 8px solid rgba(77,76,76,0.5);
+	margin-top: 10px;
+	padding: 4px 10px;
+	
+}
+
+.tituloGame {
+	display: block;
+	float: right;
+	position: relative;
+	top: -12px;
+	left: 5px;
+	font-family: 'Lemonada', cursive;
+	color: #b9c941;
+	
+}
+
