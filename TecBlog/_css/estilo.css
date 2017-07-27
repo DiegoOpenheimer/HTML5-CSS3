@@ -2,6 +2,30 @@
 	margin: 0px;
 	padding: 0px;
 }
+
+
+@keyframes animacao-titulo{
+
+	0% {
+		left: -400px;
+		top: 0px;
+		color: #b9c941;
+	}
+
+	50% {
+		font-size: 80px;
+		left: -280px;
+		top: 50px;
+		
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+
+
 body {
 	background: #f3f3f3;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -30,6 +54,9 @@ body {
 }
 #logo {
 	float: left;
+	position: relative;
+	animation-name: animacao-titulo;
+	animation-duration: 3s;
 }
 
 a {
