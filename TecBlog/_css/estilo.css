@@ -54,9 +54,13 @@ body {
 }
 #logo {
 	float: left;
+}
+#logo-principal {
+	float: left;
 	position: relative;
 	animation-name: animacao-titulo;
 	animation-duration: 3s;
+	animation-iteration-count: unique;
 }
 
 a {
