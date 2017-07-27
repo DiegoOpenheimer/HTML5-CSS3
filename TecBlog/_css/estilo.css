@@ -60,7 +60,7 @@ body {
 	position: relative;
 	animation-name: animacao-titulo;
 	animation-duration: 3s;
-	animation-iteration-count: unique;
+	
 }
 
 a {
