@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>Estourando balões</title>
+	<link rel="stylesheet" href="estilo.css" />
+	<link rel="icon" href="imagens/balao-icon.png"/>
+
+</head>
+
+<body onload="iniciar_jogo()" id='corpo'>
+<section class="titulo">
+	<h1>Modo <span id="nivelJogo"></span></h1>
+</section>
+
+<section class="corpo_body">	
+	<div class="jogo" style="float: left">
+		<div class="balao_normal">
+			<span class="imagem">Imagem</span><span class="qtd_balao cor_azul" id='qtd_balao_na_tela'>0</span>
+		</div>
+		<div class="balao_normal">
+			<span class="imagem1">Imagem</span><span class="qtd_balao cor_vermelho" id="qtd_balao_na_tela_vermelho">0</span>
+		</div>
+
+		<div class="relogio">
+			<span class="img_relogio" id='cronometro'>0</span>
+		</div>
+
+
+	</div>
+	<div class="cenario">
+		<span id="baloes"></span>
+	</div>
+	
+	<script language="javascript" src="jogo.js"></script>
+	
+</section>
+<div class="voltar">
+		<a href="index.html">Voltar</a>
+		<a id='carregar' role="refresh">Reiniciar</a>
+	</div>
+</body>
+
+</html>
