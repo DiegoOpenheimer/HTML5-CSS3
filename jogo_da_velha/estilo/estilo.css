@@ -1,0 +1,47 @@
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-shadow: 2px 2px 2px gray;
+    color: hsl(131, 88%, 36%);
+}
+
+.tabela {
+    margin: auto;
+}
+
+.tabela td {
+    padding: 20px;
+}
+
+.InformeApelido {
+    border: none;
+    text-align: center;
+}
+
+.jogo {
+    text-align: center;
+}
+
+.tabela-jogo td {
+    width: 100px;
+    height: 100px;
+}
+
+.tabela-jogo {
+    position: relative;
+    top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#apelido1 {
+    font-size: 16px;
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#apelido2 {
+    font-size: 16px;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
