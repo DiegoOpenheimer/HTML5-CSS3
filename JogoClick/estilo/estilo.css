@@ -1,0 +1,57 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.titulo {
+    float: left;
+    margin: auto;
+    width: 50%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.opcoes {
+    float: right;
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.myForm {
+    margin: auto;
+    width: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .titulo>h1 {
+        font-size: 28px;
+    }
+}
+
+.jogo {
+    max-height: 500px;
+    height: 500px;
+    clear: both;
+    background: #EEE8E8;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.balao {
+    background: black;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+#pontos {
+    color: red;
+}
+
+#pontoValor {
+    color: blue
+}
+
+#nivelJogo div {
+    color: #ABA3A3;
+}
