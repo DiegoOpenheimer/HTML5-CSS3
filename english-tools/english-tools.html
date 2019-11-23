@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Counter</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        button {
+            padding: 12px;
+            background-color: rgb(65, 62, 241);
+            border-radius: 20px;
+        }
+        button:focus {
+            outline: none;
+        }
+        audio:focus {
+            outline: none;
+        }
+        @media(prefers-color-scheme: dark) {
+            * {
+                color: white;
+                background: black;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 id="counter">Counter: 0</h1>
+    <button onclick="increment()">Increment</button>
+    <input id="input" style="margin-top: 16px" type="file" placeholder="choose the audio" accept="audio/mp3" />
+    <audio style="margin-top: 10px" id="player" controls>
+        <source id="audioSource" type="audio/mp3" />
+    </audio>
+    <button style="margin-top: 100px" onclick="restart()">Restart</button>
+    <div style="display: grid; margin: 16px; grid-template-columns: repeat(2, auto); gap: 10px; align-items: center;">
+        <p>Delay: </p>
+        <select id="select">
+            <option selected value="0">0s</option>
+            <option value="500">0.5s</option>
+            <option value="1000">1s</option>
+            <option value="2000">2s</option>
+            <option value="3000">3s</option>
+        </select>
+    </div>
+
+<script>
+    let counter = 0
+    let stopped = false
+    const counterComponent = document.getElementById('counter')
+    const input = document.getElementById('input')
+    const player = document.getElementById('player')
+    const audioSource = document.getElementById('audioSource')
+    const select = document.getElementById('select')
+    player.onplay = () => {
+        if (stopped) {
+            stopped = false
+            increment()
+        }
+        if (!counter) {
+            increment()
+        }
+    }
+
+    player.addEventListener('ended', _ => {
+        setTimeout(() => {
+            if (counter !== 0 && counter % 20 === 0) {
+                player.pause()
+                stopped = true
+            } else {
+                increment()
+                player.play()
+            }
+        }, Number(select.value))
+    })
+
+    input.onchange = event => {
+       const file = event.target.files[0]
+       audioSource.src = URL.createObjectURL(file)
+       player.load()
+    }
+    function increment() {
+        counterComponent.innerHTML = `Counter: ${++counter}`
+    }
+
+    function restart() {
+        counter = 0
+        counterComponent.innerHTML = `Counter: ${counter}`
+        player.pause()
+        player.currentTime = 0
+        stopped = false
+    }
+
+</script>
+</body>
+</html>
